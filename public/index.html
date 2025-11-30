@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>XOR CRUD GUI</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>XOR CRUD (Stream XOR) — Users</h1>
+
+    <section class="form">
+      <h2>Create User</h2>
+      <form id="createForm">
+        <input id="name" placeholder="Name" required />
+        <input id="email" placeholder="Email" required />
+        <button type="submit">Create</button>
+      </form>
+    </section>
+
+    <section class="list">
+      <h2>Users</h2>
+      <table id="usersTable">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- update area -->
+    <div id="updatePanel" class="overlay hidden">
+      <div class="card">
+        <h3>Update User</h3>
+        <form id="updateForm">
+          <input id="updName" required />
+          <input id="updEmail" required />
+          <input id="updId" type="hidden" />
+          <button type="submit">Save</button>
+          <button id="cancelUpdate" type="button">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
